@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.game-board{
+    width: 100%; /* 100% */
+    height: 500px; 
+    border-bottom: 10px solid green;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    margin: 0cm auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#pula{
+    position: absolute;
+    top: 550px;
+    z-index: 999;
+    width: 220px;
+    height: 25px;
+    border-radius: 10px;
+    border: #046186 1px solid;
+    background-color: rgb(62, 24, 133);
+    color: white;
+}
+
+#start{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.chao{
+    position: absolute;
+    top: 490px;
+    right: 00px;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.nuvens{
+    position: absolute;
+    width: 550px;
+    top: 10px;
+    animation: nuvensa 20s infinite linear; 
+}
+
+.tubo{
+    position: absolute;
+    bottom: 0;
+    width: 80px; 
+    animation: tubo-animation 1.5s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    width: 180px; 
+    bottom: 0px;
+}
+
+.jump{
+   animation: jump 500ms ease-out;
+}
+
+@keyframes tubo-animation{
+    from {
+        right: -80px;
+    } to {
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0% {
+        bottom: 0px;
+    } 
+    
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    } 
+    
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes nuvensa{
+    from{
+        right: -550px;
+    } to {
+        right: 100%;
+    }
+}
